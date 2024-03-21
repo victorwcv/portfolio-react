@@ -5,6 +5,7 @@
   justify-content: center;
   background-color: rgb(255, 255, 255);
   color: black;
+  z-index: 2;
 
    .bg {
     position: fixed;
@@ -13,7 +14,7 @@
     bottom: 0;
     width: 400px;
     background: white;
-
+    z-index: inherit;
 
     
     .links {
@@ -41,5 +42,6 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+    z-index: inherit;
    }
 }

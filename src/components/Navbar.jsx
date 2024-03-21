@@ -47,7 +47,7 @@ const Navbar = () => {
           }}
           transition={{ duration: 0.4 }}
         >
-          Victor William
+          Personal Portfolio
         </motion.span>
         <div className="social">
           {socialIconsLinks.map((item) => (

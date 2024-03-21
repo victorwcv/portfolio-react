@@ -1,20 +1,22 @@
+import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import Parallax from "./components/Parallax";
 import "./sass/index.scss";
 
 function App() {
   return (
     <>
-      <section id="homepage">
+      <section id="Homepage">
         <Navbar />
-        Hero
+        <Hero />
       </section>
-      <section id="services">Parallax</section>
+      <section id="Services"><Parallax type='services'/></section>
       <section >Services</section>
-      <section id="portfolio">Parallax</section>
+      <section id="Portfolio"><Parallax type='portfolio'/></section>
       <section>Portfolio1</section>
       <section>Portfolio2</section>
       <section>Portfolio3</section>
-      <section id="contact">Contact</section>
+      <section id="Contact">Contact</section>
     </>
   );
 }

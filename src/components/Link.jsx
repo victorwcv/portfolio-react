@@ -26,12 +26,13 @@ const Link = () => {
     },
   };
 
-  const items = ["Homepage", "Services", "Portfolio", "Contact", "About"];
+  const items = ["Homepage", "Services", "Portfolio", "Contact"];
 
   return (
+    
     <motion.div className="links" variants={variants}>
-      {items.map((item) => (
-        <motion.a href={`#${item.toLowerCase()}`} key={item} variants={itemVariants} whileHover={{scale:1.1}}>
+      {items.map(item => (
+        <motion.a href={`#${item}`} key={item} variants={itemVariants} whileHover={{scale:1.1}}>
           {item}
         </motion.a>
       ))}
