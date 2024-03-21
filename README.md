@@ -2,7 +2,7 @@
 
 Este es el repositorio de mi portafolio personal, donde muestro mis proyectos y habilidades como desarrollador. El portafolio está construido utilizando React, Sass y Framer Motion.
 
-## Características
+## Características 📌
 
 - Diseño moderno y atractivo.
 - Integración de animaciones fluidas y atractivas utilizando Framer Motion.
@@ -28,7 +28,7 @@ Descripción breve del proyecto 2.
 ![Proyecto 3](project3-thumbnail.png)
 Descripción breve del proyecto 3.
 
-## Instalación
+## Instalación 🔨
 
 1. Clona este repositorio en tu máquina local.
 2. Accede al directorio del proyecto.
@@ -42,11 +42,12 @@ Descripción breve del proyecto 3.
 ## Contacto 📬
 
 ¡Estoy abierto a nuevas oportunidades y colaboraciones! No dudes en contactarme:
-- Email: [tuemail@example.com](mailto:tuemail@example.com)
-- LinkedIn: [Tu Nombre](https://www.linkedin.com/in/tu-nombre/)
-- Sitio Web: [www.tunombre.com](https://www.tunombre.com)
+
+- Email: [victorwccv@gmail.com](mailto:victorwccv@gmail.com)
+- LinkedIn: [Victor Ccanchi](https://www.linkedin.com/in/victor-ccanchi/)
+- Sitio Web: [Under Construction](https://www.tunombre.com)
 
 
-## Licencia 
+## Licencia 📝
 
-Este proyecto está licenciado bajo la Licencia MIT.
+Este proyecto está bajo la licencia [MIT](LICENSE). Siéntete libre de utilizar el código en tus propios proyectos, modificarlo según tus necesidades o incluso distribuirlo. Aprecio cualquier atribución, pero no es obligatoria. ¡Diviértete explorando y creando con este código! 🚀
