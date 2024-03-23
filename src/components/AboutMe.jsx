@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { motion, useInView } from "framer-motion";
+import { color, motion, useInView } from "framer-motion";
 import "../sass/about-me.scss";
 import SliderText from "./SliderText";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
@@ -17,15 +17,15 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const logos = [
-  { name: "HTML", icon: faHtml5 },
-  { name: "CSS", icon: faCss3Alt },
-  { name: "JavaScript_(ES6)", icon: faJs },
-  { name: "ReactJS", icon: faReact },
-  { name: "Node.js", icon: faNode },
-  { name: "SASS", icon: faSass },
-  { name: "Git", icon: faGitAlt },
-  { name: "Bootstrap", icon: faBootstrap },
-  { name: "Node_Package_Manager", icon: faNpm },
+  { name: "HTML", icon: faHtml5, color: '#e74c25' },
+  { name: "CSS", icon: faCss3Alt, color: '#026db4' },
+  { name: "JavaScript_(ES6)", icon: faJs, color: '#ebca33' },
+  { name: "ReactJS", icon: faReact, color: "#5ed3f3" },
+  { name: "Node.js", icon: faNode, color: '#6aa65d' },
+  { name: "SASS", icon: faSass, color: "#d95898" },
+  { name: "Git", icon: faGitAlt, color: "#f65031" },
+  { name: "Bootstrap", icon: faBootstrap, color: "#7f1af5" },
+  { name: "Node_Package_Manager", icon: faNpm , color: "#b84042"},
 ];
 
 const AboutMe = () => {
@@ -37,8 +37,8 @@ const AboutMe = () => {
     },
     animate: {
       x: 0,
-      opacity: 1,
       y: 0,
+      opacity: 1,
       transition: {
         duration: 1,
         staggerChildren: 0.15,
@@ -85,18 +85,11 @@ const AboutMe = () => {
         <motion.div className="shields" variants={variants}>
           {
             logos.map(logo => 
-              (<FontAwesomeIcon key={logo.name} title={logo.name} size="5x" className="shield" icon={logo.icon} />)
+              (<FontAwesomeIcon key={logo.name} title={logo.name} size="5x" style={{color:logo.color}} className="shield" icon={logo.icon} />)
 
             )
           }
-          {/* <FontAwesomeIcon size="5x" icon={faCss3Alt} />
-          <FontAwesomeIcon size="5x" icon={faSquareJs} />
-          <FontAwesomeIcon size="5x" icon={faReact} />
-          <FontAwesomeIcon size="5x" icon={faNode} />
-          <FontAwesomeIcon size="5x" icon={faSass} />
-          <FontAwesomeIcon size="5x" icon={faNpm} />
-          <FontAwesomeIcon size="5x" icon={faGitAlt} />
-          <FontAwesomeIcon size="5x" icon={faBootstrap} /> */}
+          
         </motion.div>
       </motion.div>
     </div>
