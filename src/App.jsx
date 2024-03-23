@@ -1,22 +1,27 @@
+import AboutMe from "./components/AboutMe";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Parallax from "./components/Parallax";
 import "./sass/index.scss";
 
 function App() {
+  
+
   return (
     <>
-      <section id="Homepage">
+      <section id="homepage" >
         <Navbar />
         <Hero />
       </section>
-      <section id="Services"><Parallax type='services'/></section>
-      <section >Services</section>
-      <section id="Portfolio"><Parallax type='portfolio'/></section>
-      <section>Portfolio1</section>
-      <section>Portfolio2</section>
-      <section>Portfolio3</section>
-      <section id="Contact">Contact</section>
+      <section id="about_me" >
+        <AboutMe />
+      </section>
+      <section id="portfolio" >
+        <Parallax type="portfolio" />
+      </section>
+      <section id="contact" >
+        Contact
+      </section>
     </>
   );
 }

@@ -1,6 +1,9 @@
 .hero {
   height: calc(100vh - 100px);
-  background: linear-gradient(180deg, #0c0c1d, #111132);
+  position: relative;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, #0c0c1d 50%, #111132 80%, #292965);
   .wrapper {
     max-width: 1366px;
     height: 100%;
@@ -63,23 +66,10 @@
     transform: scaleX(-1);
     z-index: 2;
     img {
-      mask-image: linear-gradient(
-        transparent 1%,
-        black 10% ,
-      );
+      
       height: 120%;
     }
     
   }
 
-  .sliding-text-container {
-    position: absolute;
-    font-size: 50vh;
-    bottom: -120px;
-    white-space: nowrap;
-    color: #ffffff09;
-    width: 100%;
-    font-weight: bold;
-    z-index: 1;
-  }
 }

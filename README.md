@@ -50,4 +50,4 @@ Descripción breve del proyecto 3.
 
 ## Licencia 📝
 
-Este proyecto está bajo la licencia [MIT](LICENSE). Siéntete libre de utilizar el código en tus propios proyectos, modificarlo según tus necesidades o incluso distribuirlo. Aprecio cualquier atribución, pero no es obligatoria. ¡Diviértete explorando y creando con este código! 🚀
+Este proyecto está bajo la licencia [MIT](LICENSE)

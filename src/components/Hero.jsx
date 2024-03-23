@@ -1,5 +1,6 @@
 import "../sass/hero.scss";
 import { motion } from "framer-motion";
+import SliderText from "./SliderText";
 
 const textVariants = {
   initial: {
@@ -18,20 +19,6 @@ const textVariants = {
     opacity: 0,
     y: 10,
     transition: { duration: 1.5, repeat: Infinity },
-  },
-};
-const sliderVariants = {
-  initial: {
-    x: 0,
-  },
-  animate: {
-    x: "-100%",
-    transition: {
-      repeat: Infinity,
-      repeatType: "mirror",
-      duration: 15,
-      staggerChildren: 0.1,
-    },
   },
 };
 
@@ -63,13 +50,12 @@ const Hero = () => {
           </motion.div>
         </motion.div>
       </div>
-      <motion.div
-        className="sliding-text-container"
-        variants={sliderVariants}
-        animate="animate"
-      >
-        Creative...
-      </motion.div>
+      <SliderText
+        text="Creative..."
+        position={{ top: "30%" }}
+        orientation={{ x: "-100%" }}
+        duration={20}
+      />
       <div className="image-container">
         <img src="../../public/images/hero.png" alt="Me, myself and I." />
       </div>

@@ -7,8 +7,7 @@ import Sidebar from "./Sidebar";
 import { useState } from "react";
 
 const Navbar = () => {
-  const [isHover, setIsHover] = useState({
-  });
+  const [isHover, setIsHover] = useState({});
 
   const socialIconsLinks = [
     {
@@ -24,6 +23,20 @@ const Navbar = () => {
     },
   ];
 
+  const variantes = {
+    initial: {
+      opacity: 0,
+      scale: 0.5,
+    },
+    animate: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 1,
+      },
+    },
+  };
+
   const handleMouseEnter = (name) => {
     setIsHover({ ...isHover, [name]: true });
   };
@@ -37,37 +50,35 @@ const Navbar = () => {
       <Sidebar />
       <div className="wrapper">
         <motion.span
-          initial={{
-            opacity: 0,
-            scale: 0.5,
-          }}
-          animate={{
-            opacity: 1,
-            scale: 1,
-          }}
-          transition={{ duration: 0.4 }}
+          className="tittle"
+          variants={variantes}
+          initial="initial"
+          animate="animate"
         >
           Personal Portfolio
         </motion.span>
-        <div className="social">
+        <motion.div className="social">
           {socialIconsLinks.map((item) => (
-            <a
+            <motion.a
               key={item.name}
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
               onMouseEnter={() => handleMouseEnter(item.name)}
               onMouseLeave={() => handleMouseLeave(item.name)}
+              variants={variantes}
+              initial="initial"
+              animate="animate"
             >
               <FontAwesomeIcon
                 size="2x"
-                beat={isHover[item.name]}
+                shake={isHover[item.name]}
                 icon={item.icon}
-                title={`Go to ${item.name}`}
+                title={`Go to my ${item.name}`}
               />
-            </a>
+            </motion.a>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

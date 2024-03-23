@@ -26,14 +26,18 @@ const Link = () => {
     },
   };
 
-  const items = ["Homepage", "Services", "Portfolio", "Contact"];
+  const items = ["Homepage", "About_me", "Portfolio", "Contact"];
 
   return (
-    
     <motion.div className="links" variants={variants}>
-      {items.map(item => (
-        <motion.a href={`#${item}`} key={item} variants={itemVariants} whileHover={{scale:1.1}}>
-          {item}
+      {items.map((item) => (
+        <motion.a
+          href={`#${item.toLowerCase()}`}
+          key={item.toLowerCase()}
+          variants={itemVariants}
+          whileHover={{ scale: 1.1 }}
+        >
+          {item.replace(/_/, " ")}
         </motion.a>
       ))}
     </motion.div>
