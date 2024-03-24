@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import React, { useState, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import "../sass/portfolio.scss";
 import SliderText from "./SliderText";
 
@@ -7,6 +7,8 @@ const Portfolio = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animationActiveR, setAnimationActiveR] = useState(false);
   const [animationActiveL, setAnimationActiveL] = useState(false);
+  const ref = useRef();
+  const isInView = useInView(ref, {margin:'-300px'})
 
   const slides = [
     {
@@ -124,13 +126,14 @@ const Portfolio = () => {
 
   return (
     <div className="portfolio">
-      <h1>Welcome to my Projects</h1>
       <motion.div
+        ref={ref}
         className="portfolio-item"
         variants={variants}
         initial="initial"
-        whileInView="animate"
+        animate={isInView && 'animate'}
       >
+      <motion.h1 variants={variants}> Projects</motion.h1>
         <motion.div className="slider" variants={variants}>
           <button onClick={handlePrev}>❮</button>
           <motion.div
@@ -171,7 +174,7 @@ const Portfolio = () => {
               rel="noopener noreferer"
             >
               <div className="links" style={{left:"50%"}}>
-                <p>You can visit the project clicking here</p>
+                <p>You can visit the project clicking here.</p>
               </div>
             </a>
           </div>
