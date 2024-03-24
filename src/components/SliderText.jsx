@@ -28,7 +28,7 @@ const SliderText = ({ text, orientation, degree, position, duration }) => {
     width: "100%",
     fontWeight: "bold",
     rotate: degree,
-    zIndex: "1",
+    zIndex: "0",
   };
 
   return (

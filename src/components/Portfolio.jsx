@@ -8,7 +8,7 @@ const Portfolio = () => {
   const [animationActiveR, setAnimationActiveR] = useState(false);
   const [animationActiveL, setAnimationActiveL] = useState(false);
   const ref = useRef();
-  const isInView = useInView(ref, {margin:'-300px'})
+  const isInView = useInView(ref, { margin: "-300px" });
 
   const slides = [
     {
@@ -86,7 +86,7 @@ const Portfolio = () => {
     animate: {
       x: "-220%",
       y: 0,
-      scale: 3.10,
+      scale: 3.1,
       opacity: 1,
       transition: {
         duration: 0.2,
@@ -104,7 +104,7 @@ const Portfolio = () => {
     animate: {
       x: "220%",
       y: 0,
-      scale: 3.10,
+      scale: 3.1,
       opacity: 1,
       transition: {
         duration: 0.2,
@@ -131,9 +131,9 @@ const Portfolio = () => {
         className="portfolio-item"
         variants={variants}
         initial="initial"
-        animate={isInView && 'animate'}
+        animate={isInView && "animate"}
       >
-      <motion.h1 variants={variants}> Projects</motion.h1>
+        <motion.h1 variants={variants}> Projects</motion.h1>
         <motion.div className="slider" variants={variants}>
           <button onClick={handlePrev}>❮</button>
           <motion.div
@@ -162,9 +162,10 @@ const Portfolio = () => {
               target="_blank"
               rel="noopener noreferer"
             >
-              <div className="links" style={{left:'0%'}}>
+              <div className="links" style={{ left: "0%" }}>
                 <p>
-                  You're welcome to check out the code of my project on GitHub clicking here.
+                  You're welcome to check out the code of my project on GitHub
+                  clicking here.
                 </p>
               </div>
             </a>
@@ -173,7 +174,7 @@ const Portfolio = () => {
               target="_blank"
               rel="noopener noreferer"
             >
-              <div className="links" style={{left:"50%"}}>
+              <div className="links" style={{ left: "50%" }}>
                 <p>You can visit the project clicking here.</p>
               </div>
             </a>
@@ -204,10 +205,11 @@ const Portfolio = () => {
         </motion.div>
       </motion.div>
       <SliderText
-        text="Passionate..."
-        position={{ top: "35%" }}
-        orientation={{ x: "-100%" }}
-        duration={20}
+        text="Passionate!"
+        position={{ top: "0%", left: "40%" }}
+        orientation={{ y: "150%" }}
+        duration={10}
+        degree={270}
       />
     </div>
   );

@@ -3,16 +3,17 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  
-  z-index: 3;
+  z-index: 4;
 
-  input, textarea {
+  input,
+  textarea {
     font-size: 1rem;
     padding: 10px 20px;
     background-color: transparent;
     border: 1px solid white;
     color: white;
     border-radius: 5px;
+    z-index: 4;
   }
 
   button {
@@ -22,10 +23,10 @@
     cursor: pointer;
     font-weight: 500;
     border-radius: 5px;
+    z-index: 4;
 
     &:hover {
       background-color: rgb(255, 189, 67);
     }
   }
-  
 }

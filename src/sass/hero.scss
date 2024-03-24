@@ -7,54 +7,58 @@
   .wrapper {
     max-width: 1366px;
     height: 100%;
-    margin:  auto;
+    margin: auto;
     z-index: 2;
 
-      .text-container {
-        height: 100%;
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 40px;
+    .text-container {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
 
-        h2 {
-          font-size: 30px;
-          color: rebeccapurple;
-          letter-spacing: 10px;
-        }
-
-        h1 {
-          font-size: 88px;
-          line-height: 1.2;
-        }
-
-        
-        .buttons-container {
-          display: flex;
-          align-items: center;
-          column-gap: 20px;
-          z-index: 3;
-
-          button {
-            cursor: pointer;
-            padding: 20px;
-            border: 1px solid white;
-            border-radius: 10px;
-            background-color: transparent;
-            margin-right: 20px;
-            color: white;
-            font-weight: 300;
-            z-index: inherit;
-            
-          }
-          img {
-            width: 50px;
-            
-          }
-        }
-
+      h2 {
+        font-size: 30px;
+        color: rebeccapurple;
+        letter-spacing: 10px;
       }
+
+      h1 {
+        font-size: 88px;
+        line-height: 1.2;
+      }
+
+      .buttons-container {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        z-index: 3;
+
+        button {
+          cursor: pointer;
+          font-size: 1rem;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 10px;
+          background-color: orange;
+          margin-right: 20px;
+          color: black;
+          font-weight: 300;
+          z-index: inherit;
+          transition: 0.3s;
+          &:hover {
+            box-shadow: 0 0 10px white;
+          }
+          &:active {
+            scale: 0.9;
+          }
+        }
+        img {
+          width: 50px;
+        }
+      }
+    }
   }
 
   .image-container {
@@ -66,10 +70,7 @@
     transform: scaleX(-1);
     z-index: 2;
     img {
-      
       height: 120%;
     }
-    
   }
-
 }

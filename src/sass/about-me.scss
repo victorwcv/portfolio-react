@@ -3,7 +3,6 @@
   top: 0;
   left: 0;
   height: 100%;
-  // background: #0c1c10;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,12 +13,11 @@
     display: flex;
     flex-direction: column;
     gap: 100px;
-    
+
     .container-am {
       display: flex;
       gap: 50px;
 
-      
       .pf-container {
         width: 400px;
         height: 400px;
@@ -52,7 +50,7 @@
         button {
           width: 50%;
           padding: 14px 70px;
-          background-color: rgba(245, 205, 77, 255);
+          background-color: orange;
           font-size: 1.3rem;
           font-weight: bold;
           text-transform: uppercase;
@@ -62,12 +60,13 @@
           margin-top: 60px;
           z-index: 2;
           transition: all 0.3s ease-in-out;
-        }
-        button:active {
-          transform: scale(0.95);
-        }
-        button:hover {
-          box-shadow: 0 0 10px white;
+
+          &:hover {
+            box-shadow: 0 0 10px white;
+          }
+          &:active {
+            transform: scale(0.95);
+          }
         }
       }
     }
@@ -80,12 +79,11 @@
       .shield {
         transition: all 0.3s ease-in-out;
       }
-  
+
       .shield:hover {
         transform: scale(1.4);
         cursor: pointer;
       }
     }
   }
-
 }

@@ -3,6 +3,7 @@ import Contact from "./components/Contact";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Portfolio from "./components/Portfolio";
+import Footer from "./components/Footer";
 import "./sass/index.scss";
 
 function App() {

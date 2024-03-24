@@ -37,7 +37,7 @@ const Hero = () => {
             Junior Fullstack Developer with a Senior Mindset
           </motion.h1>
           <motion.div className="buttons-container" variants={textVariants}>
-            <motion.button variants={textVariants}>
+            <motion.button href="#my_projects" variants={textVariants}>
               See the Latest Work
             </motion.button>
             <motion.button variants={textVariants}>Contact Me</motion.button>
@@ -51,10 +51,10 @@ const Hero = () => {
         </motion.div>
       </div>
       <SliderText
-        text="Creative..."
-        position={{ top: "30%" }}
-        orientation={{ x: "-100%" }}
-        duration={20}
+        text="Creative!"
+        position={{ top: "30%", left: "30%" }}
+        orientation={{ x: "-80%" }}
+        duration={10}
       />
       <div className="image-container">
         <img src="../../public/images/hero.png" alt="Me, myself and I." />

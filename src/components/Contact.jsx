@@ -1,14 +1,20 @@
 import { useRef } from "react";
 import "../sass/contact.scss";
 import FormContact from "./FormContact";
-import { motion,useInView } from "framer-motion";
-
+import { motion, useInView } from "framer-motion";
+import SliderText from "./SliderText";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faEnvelope,
+  faLocation,
+  faMapPin,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
+import Footer from "./Footer";
 
 const Contact = () => {
-  
   const ref = useRef();
-  const isInView = useInView(ref, {margin:'-300px'})
-
+  const isInView = useInView(ref, { margin: "-300px" });
 
   const variants = {
     initial: {
@@ -26,44 +32,58 @@ const Contact = () => {
   };
 
   return (
-    <motion.div
-      ref={ref}
-      className="contact"
-      variants={variants}
-      initial="initial"
-      animate="animate"
-    >
-      <motion.div className="text-container" variants={variants}>
-        <motion.h1 variants={variants}>Let's work together</motion.h1>
-        <motion.div className="item" variants={variants}>
-          <h2>Mail</h2>
-          <span>victorwccv@gmail.com</span>
-        </motion.div>
-        <motion.div className="item" variants={variants}>
-          <h2>Ubication</h2>
-          <span>Peru</span>
-        </motion.div>
-        <motion.div className="item" variants={variants}>
-          <h2>Phone</h2>
+    <div className="contact-container">
+      <SliderText
+        text="Innovative!"
+        degree={0}
+        position={{ left: "0%", top: "-15%" }}
+        orientation={{ x: "-50%" }}
+        duration={10}
+      />
+      <motion.div
+        ref={ref}
+        className="contact"
+        variants={variants}
+        initial="initial"
+        animate="animate"
+      >
+        <motion.div className="text-container" variants={variants}>
+          <motion.h1 variants={variants}>Let's work together</motion.h1>
+          <motion.div className="item" variants={variants}>
+            <h2>
+              <FontAwesomeIcon icon={faEnvelope} className="icon" />
+              Mail
+            </h2>
+            <span>victorwccv@gmail.com</span>
+          </motion.div>
+          <motion.div className="item" variants={variants}>
+            <h2>
+              <FontAwesomeIcon icon={faLocation} className="icon" />
+              Ubication
+            </h2>
+            <span>Peru</span>
+          </motion.div>
+          {/* <motion.div className="item" variants={variants}>
+          <h2><FontAwesomeIcon icon={faPhone} />Phone</h2>
           <span>+51 931 196 396</span>
+        </motion.div> */}
         </motion.div>
-      </motion.div>
-      <div className="form-container">
-        <motion.div
-          className="phone-svg"
-          initial={{ opacity: 1 }}
-          whileInView={{ opacity: 0 }}
-          transition={{ delay: 3, duration: 1 }}
-        >
-          <svg height="450px" width="450px" viewBox="0 0 512 512">
-            <motion.path
-              className="st0"
-              fill='none'
-              strokeWidth={3}
-              initial={{pathLength:0}}
-              animate = {isInView && {pathLength:1}}
-              transition={{duration:3}}
-              d="M255.998,0.002C114.606,0.012,0.01,114.604,0,256c0.01,141.406,114.65,255.328,255.926,255.998h0.334
+        <div className="form-container">
+          <motion.div
+            className="phone-svg"
+            initial={{ opacity: 1 }}
+            whileInView={{ opacity: 0 }}
+            transition={{ delay: 3, duration: 1 }}
+          >
+            <svg height="450px" width="450px" viewBox="0 0 512 512">
+              <motion.path
+                className="st0"
+                fill="none"
+                strokeWidth={3}
+                initial={{ pathLength: 0 }}
+                animate={isInView && { pathLength: 1 }}
+                transition={{ duration: 3 }}
+                d="M255.998,0.002C114.606,0.012,0.01,114.604,0,256c0.01,141.406,114.65,255.328,255.926,255.998h0.334
                 l0.297-0.009c27.124,0.038,49.507-8.527,64.961-22.594c15.468-14.01,23.727-33.254,23.708-52.736
                 c0.02-9.148-1.914-18.306-5.521-27.024c6.086-3.464,10.143-6.612,11.301-7.444c4.152-2.957,16-18.766,7.693-31.79
                 c-8.344-13.014-38.042-42.678-46.152-47.702c-8.086-5.015-21.598-0.124-28.105,9.426c-6.526,9.55-11.674,6.689-11.674,6.689
@@ -76,18 +96,20 @@ const Contact = () => {
                 c41.033,41.052,66.354,97.606,66.373,160.237c-0.01,38.67-9.666,74.966-26.698,106.784c-9.531,17.837-21.397,34.23-35.177,48.812
                 c-5.569,5.905-5.301,15.206,0.594,20.776c5.894,5.578,15.205,5.32,20.784-0.584c15.54-16.46,28.937-34.976,39.712-55.139
                 C501.071,340.717,512,299.589,512,256C511.98,114.604,397.389,0.012,255.998,0.002z"
-            />
-          </svg>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 4, duration:1}}
-        >
-          <FormContact />
-        </motion.div>
-      </div>
-    </motion.div>
+              />
+            </svg>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 4, duration: 1 }}
+          >
+            <FormContact />
+          </motion.div>
+        </div>
+      </motion.div>
+      <Footer />
+    </div>
   );
 };
 
