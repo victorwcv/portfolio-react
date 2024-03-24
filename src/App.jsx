@@ -1,7 +1,8 @@
 import AboutMe from "./components/AboutMe";
+import Contact from "./components/Contact";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
-import Parallax from "./components/Parallax";
+import Portfolio from "./components/Portfolio";
 import "./sass/index.scss";
 
 function App() {
@@ -16,11 +17,11 @@ function App() {
       <section id="about_me" >
         <AboutMe />
       </section>
-      <section id="portfolio" >
-        <Parallax type="portfolio" />
+      <section id="my_projects" >
+        <Portfolio />
       </section>
       <section id="contact" >
-        Contact
+        <Contact />
       </section>
     </>
   );
