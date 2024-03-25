@@ -67,7 +67,7 @@ const AboutMe = ({anchoViewport}) => {
       >
         <div className="container-am">
           <motion.div className="pf-container" variants={variants}>
-            <img src="/public/images/pf.png" alt="Profile Picture" />
+            <img src="/pf.png" alt="Profile Picture" />
           </motion.div>
           <motion.div className="content-am" variants={variants}>
             <h1>About Me</h1>
@@ -80,10 +80,10 @@ const AboutMe = ({anchoViewport}) => {
               my skills to challenging projects and contribute to your team's
               success with creative web solutions.
             </p>
-            <button>
+            <a href="/src/assets/resume-victor-ccanchi-en.pdf" download={true}><button className="button-resume">
               {" "}
               <FontAwesomeIcon icon={faDownload} /> Download Resume
-            </button>
+            </button></a>
           </motion.div>
         </div>
         <motion.div className="shields" variants={variants}>

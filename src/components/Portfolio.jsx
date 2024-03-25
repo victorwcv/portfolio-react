@@ -12,32 +12,32 @@ const Portfolio = ({anchoViewport}) => {
 
   const slides = [
     {
-      title: "Real State with Rect",
-      description: `A full stack web application built using Node.js and Express for the server side, MongoDB as the database, and a RESTful API to handle user authentication. The front end was`,
-      imgUrl: "/public/images/proyect_1.jpg",
-      githubLink: "",
-      deployLink: "",
-    },
-    {
-      title: "Bad Bank App",
-      description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati non voluptas soluta laborum ipsam fuga libero est tenetur temporibus vero minus, qui quam quibusdam nemo. Sapiente illum quasi dolorem cupiditate?`,
-      imgUrl: "/public/images/proyect_2.jpg",
-      githubLink: "",
-      deployLink: "",
-    },
-    {
-      title: "Shoping Cart",
-      description: `A full stack web application built using Node.js and Express for the server side, MongoDB as the database, and a RESTful API to handle user authentication. The front end was`,
-      imgUrl: "/public/images/proyect_3.jpg",
-      githubLink: "",
-      deployLink: "",
-    },
-    {
-      title: "My first Portfolio",
+      title: "Project HTML",
       description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem inventore quaerat, nulla quisquam quidem adipisci natus ipsum voluptates, laborum reprehenderit ullam facere earum alias sed in, dolore obcaecati explicabo iste.`,
-      imgUrl: "/public/images/proyect_4.jpg",
-      githubLink: "",
-      deployLink: "",
+      imgUrl: "/under-construction.webp",
+      githubLink: "#",
+      deployLink: "#",
+    },
+    {
+      title: "Project React",
+      description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati non voluptas soluta laborum ipsam fuga libero est tenetur temporibus vero minus, qui quam quibusdam nemo. Sapiente illum quasi dolorem cupiditate?`,
+      imgUrl: "/under-construction.webp",
+      githubLink: "#",
+      deployLink: "#",
+    },
+    {
+      title: "Project Fullstack 1",
+      description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem inventore quaerat, nulla quisquam quidem adipisci natus ipsum voluptates, laborum reprehenderit ullam facere earum alias sed in, dolore obcaecati explicabo iste.`,
+      imgUrl: "/under-construction.webp",
+      githubLink: "#",
+      deployLink: "#",
+    },
+    {
+      title: "Project Fullstack 2",
+      description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem inventore quaerat, nulla quisquam quidem adipisci natus ipsum voluptates, laborum reprehenderit ullam facere earum alias sed in, dolore obcaecati explicabo iste.`,
+      imgUrl: "/under-construction.webp",
+      githubLink: "#",
+      deployLink: "#",
     },
   ];
 

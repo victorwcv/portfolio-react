@@ -42,7 +42,7 @@ const Hero = () => {
             
              <a href="#contact"><button >Contact Me</button></a>
             <motion.img
-              src="../../public/images/scroll_1.png"
+              src="/scroll_1.png"
               alt=""
               variants={textVariants}
               animate="scrollButton"
@@ -57,7 +57,7 @@ const Hero = () => {
         duration={10}
       />
       <div className="image-container">
-        <img src="../../public/images/hero.png" alt="Me, myself and I." />
+        <img src="/hero.png" alt="Me, myself and I." />
       </div>
     </div>
   );
