@@ -80,7 +80,7 @@ const AboutMe = ({anchoViewport}) => {
               my skills to challenging projects and contribute to your team's
               success with creative web solutions.
             </p>
-            <a href="/src/assets/resume-victor-ccanchi-en.pdf" download={true}><button className="button-resume">
+            <a href="/resume-victor-ccanchi-en.pdf" download={true}><button className="button-resume">
               {" "}
               <FontAwesomeIcon icon={faDownload} /> Download Resume
             </button></a>
