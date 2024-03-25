@@ -6,19 +6,23 @@
   top: 0;
   left: 0;
   background: linear-gradient(180deg, #0c0c1d 70%, #292965);
+  z-index: 3;
+
   .wrapper {
     max-width: 1366px;
     height: 100%;
     margin: auto;
-    z-index: 2;
+    position: relative;
 
     .text-container {
+      position: relative;
       height: 100%;
       width: 50%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       gap: 40px;
+      z-index: 3;
       
       @include mobile {
         height: 50%;
@@ -33,6 +37,8 @@
         font-size: 30px;
         color: rebeccapurple;
         letter-spacing: 10px;
+        line-height: 1.2;
+
       }
 
       h1 {
@@ -41,6 +47,7 @@
 
         @include mobile {
           font-size: 36px;
+          margin: 0 10px;
         }
       }
 
@@ -54,7 +61,7 @@
           gap: 15px;
         }
 
-        button {
+        a {
           cursor: pointer;
           font-size: 1rem;
           padding: 10px 20px;
@@ -66,6 +73,8 @@
           font-weight: 300;
           z-index: inherit;
           transition: 0.3s;
+          user-select: none;
+
           @include mobile {
             margin: auto;
           }
@@ -84,27 +93,39 @@
         }
       }
     }
+    .image-container {
+      position: absolute;
+      height: 100%;
+      max-width: 70%;
+      bottom:  0;
+      right: 0;
+      z-index: 2;
+      
+      
+      @include mobile {
+        height: 50%;
+        width: 100%;
+        top: unset;
+        bottom: 0;
+        right: unset;
+        left: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      
+      
+      img {
+        height: auto;
+        width: 100%;
+        transform: scaleX(-1);
+  
+        @include mobile {
+          height: 100%;
+          object-fit: cover;  
+        }
+      }
+  
+    }
   }
 
-  .image-container {
-    overflow: hidden;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 7%;
-    transform: scaleX(-1);
-    z-index: 2;
-    @include mobile {
-      height: 50%;
-      width: 100%;
-      top: unset;
-      bottom: 0;
-      right: unset;
-    }
-
-
-    img {
-      height: 120%;
-    }
-  }
 }

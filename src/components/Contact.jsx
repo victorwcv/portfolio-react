@@ -14,7 +14,7 @@ import Footer from "./Footer";
 
 const Contact = () => {
   const ref = useRef();
-  const isInView = useInView(ref, { margin: "-300px" });
+  const isInView = useInView(ref, { margin: "-100px" });
 
   const variants = {
     initial: {
@@ -63,10 +63,6 @@ const Contact = () => {
             </h2>
             <span>Peru</span>
           </motion.div>
-          {/* <motion.div className="item" variants={variants}>
-          <h2><FontAwesomeIcon icon={faPhone} />Phone</h2>
-          <span>+51 931 196 396</span>
-        </motion.div> */}
         </motion.div>
         <div className="form-container">
           <motion.div

@@ -28,7 +28,7 @@
     right: 15%;
     display: flex;
     gap: 50px;
-    z-index: 3;
+    z-index: 5;
 
     @include mobile {
       gap: 15px;

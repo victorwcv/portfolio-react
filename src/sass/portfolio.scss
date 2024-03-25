@@ -10,6 +10,7 @@
   align-items: center;
   justify-content: center;
   z-index: 3;
+  user-select: none;
 
   @include mobile {
     max-width: 100vw;
@@ -98,10 +99,10 @@
             bottom: 0;
             background: linear-gradient(rgba(0, 0, 0, 0.503),rgb(0, 0, 0));
 
-            &:hover {
-              background: none;
-              opacity: initial;
-            }
+            // &:hover {
+            //   background: none;
+            //   opacity: none;
+            // }
           }
 
           p {
@@ -145,7 +146,7 @@
         font-size: 48px;
         color: #ccc;
         cursor: pointer;
-        transition: color 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
         margin: 0 20px;
 
         &:hover {
@@ -163,8 +164,8 @@
             right: 0px;
           }
 
-          &:hover {
-            color: white;
+          &:active {
+            color: orange;
           }
           
         }

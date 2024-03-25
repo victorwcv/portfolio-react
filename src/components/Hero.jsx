@@ -32,16 +32,18 @@ const Hero = () => {
           initial="initial"
           animate="animate"
         >
-          <motion.h2 variants={textVariants}>VICTOR CCANCHI</motion.h2>
-          <motion.h1 variants={textVariants}>
+          <motion.h2 className="no-touch" variants={textVariants}>
+            VICTOR CCANCHI
+          </motion.h2>
+          <motion.h1 className="no-touch" variants={textVariants}>
             Junior Fullstack Developer with a Senior Mindset
           </motion.h1>
           <motion.div className="buttons-container" variants={textVariants}>
-            
-            <a href="#my_projects"> <button >See my Work </button></a>
-            
-             <a href="#contact"><button >Contact Me</button></a>
+            <a href="#my_projects"> See my Work</a>
+
+            <a href="#contact">Contact Me</a>
             <motion.img
+              className="no-touch"
               src="/scroll_1.png"
               alt=""
               variants={textVariants}
@@ -49,6 +51,9 @@ const Hero = () => {
             />
           </motion.div>
         </motion.div>
+        <div className="image-container no-touch">
+          <img src="/hero.png" alt="Me, myself and I." />
+        </div>
       </div>
       <SliderText
         text="Creative!"
@@ -56,9 +61,6 @@ const Hero = () => {
         orientation={{ x: "-80%" }}
         duration={10}
       />
-      <div className="image-container">
-        <img src="/hero.png" alt="Me, myself and I." />
-      </div>
     </div>
   );
 };

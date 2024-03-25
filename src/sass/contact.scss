@@ -9,6 +9,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  user-select: none;
 
   .contact {
     height: 100%;
@@ -80,15 +81,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
-        // left: 50%;
-        // transform: translateX(-50%);
-        // z-index: 0;
-        @include mobile {
-          // transform: translatex(0%) scale(60%);
-          // left: initial;
-          // // top: -25%;
-        }
       }
     }
   }

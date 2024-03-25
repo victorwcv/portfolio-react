@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import "../sass/slider-text.scss";
 
 const SliderText = ({ text, orientation, degree, position, duration }) => {
   const sliderVariants = {
@@ -19,20 +20,17 @@ const SliderText = ({ text, orientation, degree, position, duration }) => {
   };
 
   const style = {
-    position: "absolute",
-    fontSize: "50vh",
     ...position,
-    whiteSpace: "nowrap",
-    color: "#ffffff09",
-    height: "100%",
-    width: "100%",
-    fontWeight: "bold",
     rotate: degree,
-    zIndex: "0",
   };
 
   return (
-    <motion.div style={style} variants={sliderVariants} animate="animate">
+    <motion.div
+      className="slider-text no-touch"
+      style={style}
+      variants={sliderVariants}
+      animate="animate"
+    >
       {text}
     </motion.div>
   );

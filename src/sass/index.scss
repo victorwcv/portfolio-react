@@ -3,16 +3,17 @@ html {
   scroll-behavior: smooth;
 }
 
-*{
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 body {
   background-color: #0c0c1d;
-  color:white;
+  color: white;
   overflow-x: hidden;
 }
 
@@ -27,9 +28,22 @@ section {
   overflow: hidden;
 }
 
-
 @mixin mobile {
   @media (max-width: 738px) {
     @content;
   }
+}
+
+.no-touch {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, and Opera */
+  pointer-events: none;
+  -webkit-user-drag: none; /* Safari */
+  -khtml-user-drag: none; /* Konqueror */
+  -moz-user-drag: none; /* Firefox */
+  -o-user-drag: none; /* Opera */
 }

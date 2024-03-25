@@ -50,7 +50,7 @@ const Navbar = () => {
       <Sidebar />
       <div className="wrapper">
         <motion.span
-          className="tittle"
+          className="tittle no-touch"
           variants={variantes}
           initial="initial"
           animate="animate"

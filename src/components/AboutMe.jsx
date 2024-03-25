@@ -28,7 +28,7 @@ const logos = [
   { name: "Node_Package_Manager", icon: faNpm, color: "#b84042" },
 ];
 
-const AboutMe = ({anchoViewport}) => {
+const AboutMe = ({ anchoViewport }) => {
   const ref = useRef();
   const isInView = useInView(ref, { margin: "-100px" });
 
@@ -66,12 +66,12 @@ const AboutMe = ({anchoViewport}) => {
         animate={isInView && "animate"}
       >
         <div className="container-am">
-          <motion.div className="pf-container" variants={variants}>
+          <motion.div className="pf-container no-touch" variants={variants}>
             <img src="/pf.png" alt="Profile Picture" />
           </motion.div>
           <motion.div className="content-am" variants={variants}>
-            <h1>About Me</h1>
-            <p>
+            <h1 className="no-touch">About Me</h1>
+            <p className="no-touch">
               Hello, I'm Victor, soon-to-be graduate of the MIT xPRO
               Professional Certificate Program in Full Stack Development.
               Excited to finish this transformative journey! Proficient in
@@ -80,10 +80,13 @@ const AboutMe = ({anchoViewport}) => {
               my skills to challenging projects and contribute to your team's
               success with creative web solutions.
             </p>
-            <a href="/resume-victor-ccanchi-en.pdf" download={true}><button className="button-resume">
-              {" "}
+            <a
+              className="button-resume"
+              href="/resume-victor-ccanchi-en.pdf"
+              download={true}
+            >
               <FontAwesomeIcon icon={faDownload} /> Download Resume
-            </button></a>
+            </a>
           </motion.div>
         </div>
         <motion.div className="shields" variants={variants}>

@@ -1,4 +1,4 @@
-@import './index.scss';
+@import "./index.scss";
 
 .sidebar {
   display: flex;
@@ -9,7 +9,7 @@
   color: black;
   z-index: 10;
 
-   .bg {
+  .bg {
     position: fixed;
     top: 0;
     left: 0;
@@ -20,10 +20,9 @@
 
     @include mobile {
       width: 100vw;
-      height: 35vh;
+      height: 300px;
     }
 
-    
     .links {
       position: absolute;
       width: 100%;
@@ -32,18 +31,17 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      
+
       gap: 20px;
       a {
         font-size: 40px;
         @include mobile {
-        font-size: 20px;
+          font-size: 20px;
+        }
       }
-      }
-      
     }
-   }
-   .bars {
+  }
+  .bars {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,5 +55,5 @@
     border: none;
     cursor: pointer;
     z-index: inherit;
-   }
+  }
 }
