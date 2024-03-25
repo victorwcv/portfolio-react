@@ -1,4 +1,7 @@
+@import './index.scss';
+
 .navbar {
+
   height: 100px;
 
   .wrapper {
@@ -12,6 +15,10 @@
     span {
       font-weight: bolder;
       font-size: 1.5rem;
+
+      @include mobile {
+        display: none;
+      }
     }
   }
 
@@ -22,5 +29,10 @@
     display: flex;
     gap: 50px;
     z-index: 3;
+
+    @include mobile {
+      gap: 15px;
+      right: 8%;
+    }
   }
 }

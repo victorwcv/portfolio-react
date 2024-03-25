@@ -28,13 +28,13 @@ const logos = [
   { name: "Node_Package_Manager", icon: faNpm, color: "#b84042" },
 ];
 
-const AboutMe = () => {
+const AboutMe = ({anchoViewport}) => {
   const ref = useRef();
   const isInView = useInView(ref, { margin: "-100px" });
 
   const variants = {
     initial: {
-      x: 500,
+      x: anchoViewport > 600 ? 500 : 200,
       y: 0,
       opacity: 0,
     },
@@ -43,7 +43,7 @@ const AboutMe = () => {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 1,
+        duration: 0.5,
         staggerChildren: 0.15,
       },
     },

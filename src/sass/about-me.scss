@@ -1,3 +1,5 @@
+@import './index.scss';
+
 .about-me {
   position: relative;
   top: 0;
@@ -13,10 +15,24 @@
     display: flex;
     flex-direction: column;
     gap: 100px;
+    
+    @include mobile {
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 15px;
+    }
 
     .container-am {
       display: flex;
       gap: 50px;
+
+      @include mobile {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+      }
 
       .pf-container {
         width: 400px;
@@ -27,6 +43,11 @@
         justify-content: center;
         align-items: center;
         z-index: 2;
+        @include mobile {
+          width: 170px;
+          height: 170px;
+          margin-top: 80px;
+        }
         img {
           width: 110%;
           height: auto;
@@ -41,10 +62,18 @@
         h1 {
           font-size: 80px;
           text-align: center;
+          @include mobile {
+           font-size: 30px;
+          }
         }
 
         p {
           font-size: 20px;
+          @include mobile {
+            font-size: 14px;
+            margin: 5px 15px;
+            text-align: center;
+          }
         }
 
         button {
@@ -61,6 +90,13 @@
           z-index: 2;
           transition: all 0.3s ease-in-out;
 
+          @include mobile {
+            width: auto;
+            font-size: 14px;
+            padding: 10px;
+            margin: 15px;
+          }
+
           &:hover {
             box-shadow: 0 0 10px white;
           }
@@ -75,6 +111,12 @@
       display: flex;
       gap: 50px;
       margin: auto;
+      @include mobile {
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 10px;
+        gap: 15px;
+      }
 
       .shield {
         transition: all 0.3s ease-in-out;

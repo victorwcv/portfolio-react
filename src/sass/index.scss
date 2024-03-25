@@ -28,3 +28,8 @@ section {
 }
 
 
+@mixin mobile {
+  @media (max-width: 738px) {
+    @content;
+  }
+}

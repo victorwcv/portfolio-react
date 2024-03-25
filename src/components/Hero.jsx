@@ -37,10 +37,10 @@ const Hero = () => {
             Junior Fullstack Developer with a Senior Mindset
           </motion.h1>
           <motion.div className="buttons-container" variants={textVariants}>
-            <motion.button href="#my_projects" variants={textVariants}>
-              See the Latest Work
-            </motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
+            
+            <a href="#my_projects"> <button >See my Work </button></a>
+            
+             <a href="#contact"><button >Contact Me</button></a>
             <motion.img
               src="../../public/images/scroll_1.png"
               alt=""

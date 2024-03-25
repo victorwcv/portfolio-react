@@ -1,28 +1,42 @@
+@import "./index.scss";
+
 .portfolio {
   position: relative;
   top: 0;
   left: 0;
   height: 100%;
-  // background: #1c100c;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  h1{
-    font-size: 3vw;
-    margin: 2vw;
+  @include mobile {
+    max-width: 100vw;
+    margin: auto 5px;
+  }
+
+  h1 {
+    font-size: 72px;
+    margin: 30px;
+
+    @include mobile {
+      font-size: 36px;
+    }
   }
 
   .portfolio-item {
     display: flex;
     flex-direction: column;
-    // max-width: 1366px;
     align-items: center;
     margin-bottom: 2rem;
     z-index: "2";
 
+    @include mobile {
+      margin-bottom: 10px;
+    }
+
     .slider {
+      position: relative;
       width: 100%;
       display: flex;
       justify-content: center;
@@ -31,7 +45,7 @@
 
       .img-project-container {
         position: relative;
-        width: 600px;
+        width: fit-content;
         display: flex;
         justify-content: center;
         height: auto;
@@ -42,9 +56,17 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         z-index: 2;
 
+        @include mobile {
+          margin: auto;
+          border-radius: initial;
+        }
+
         .img-project {
           width: 600px;
           height: auto;
+          @include mobile {
+            width: 100%;
+          }
         }
 
         .links {
@@ -58,16 +80,39 @@
           top: 0;
           opacity: 0;
           transition: all 0.4s ease;
+
+          &:hover {
+            background: linear-gradient(
+              180deg,
+              rgba(0, 0, 0, 0.118),
+              rgba(0, 0, 0, 0.908)
+            );
+            opacity: 1;
+          }
+
+          @include mobile {
+            opacity: initial;
+            height: 25%;
+            top: initial;
+            bottom: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.503),rgb(0, 0, 0));
+
+            &:hover {
+              background: none;
+              opacity: initial;
+            }
+          }
+
           p {
             font-size: 18px;
             margin: 10%;
             text-align: center;
             color: orange;
             font-weight: bold;
-          }
-          &:hover {
-            background:linear-gradient(180deg, rgba(0, 0, 0, 0.118), rgba(0, 0, 0, 0.908));
-            opacity: 1;
+
+            @include mobile {
+              font-size: 12px;
+            }
           }
         }
       }
@@ -82,41 +127,80 @@
         display: flex;
         z-index: 3;
 
+        @include mobile {
+          display: none;
+        }
+
         .miniature {
           width: 200px;
           height: auto;
         }
       }
 
-      button {
+      .button {
         background-color: transparent;
         border: none;
-        font-size: 5vw;
+        font-size: 48px;
         color: #ccc;
         cursor: pointer;
         transition: color 0.2s ease-in-out;
-        margin: 0 2vw;
+        margin: 0 20px;
 
         &:hover {
-          color: #0070f3;
+          color: orange;
         }
+
+        @include mobile {
+          position: absolute;
+          z-index: 5;
+
+          &:nth-of-type(1) {
+            left: 0px;
+          }
+          &:nth-of-type(2) {
+            right: 0px;
+          }
+
+          &:hover {
+            color: white;
+          }
+          
+        }
+
       }
     }
     .portfolio-description {
       text-align: center;
+      border: 2px solid orange;
+      border-radius: 10px;
       margin-top: 2rem;
       max-width: 800px;
+
+      @include mobile {
+        
+        max-width: 100%;
+        min-height:30vh;
+      }
 
       h2 {
         font-size: 2rem;
         font-weight: bold;
-        margin-bottom: 1rem;
+        margin: 1rem;
+
+        @include mobile {
+          font-size: 22px;
+          margin: 1rem 0 0 0;
+        }
       }
 
       p {
         font-size: 1.2rem;
         color: #ccc;
         margin: 1rem;
+
+        @include mobile {
+          font-size: 14px;
+        }
       }
     }
   }

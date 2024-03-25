@@ -3,12 +3,12 @@ import { motion, useInView } from "framer-motion";
 import "../sass/portfolio.scss";
 import SliderText from "./SliderText";
 
-const Portfolio = () => {
+const Portfolio = ({anchoViewport}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animationActiveR, setAnimationActiveR] = useState(false);
   const [animationActiveL, setAnimationActiveL] = useState(false);
   const ref = useRef();
-  const isInView = useInView(ref, { margin: "-300px" });
+  const isInView = useInView(ref, { margin: "-100px" });
 
   const slides = [
     {
@@ -62,7 +62,7 @@ const Portfolio = () => {
   const variants = {
     initial: {
       x: 0,
-      y: -500,
+      y: anchoViewport < 300 ? 200 : 500,
       opacity: 0,
     },
     animate: {
@@ -70,8 +70,8 @@ const Portfolio = () => {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 1,
-        staggerChildren: 0.5,
+        duration: 0.5,
+        staggerChildren: 0.1,
       },
     },
   };
@@ -119,7 +119,7 @@ const Portfolio = () => {
     animate: {
       opacity: 0,
       transition: {
-        duration: 1,
+        duration: 0.5,
       },
     },
   };
@@ -135,7 +135,7 @@ const Portfolio = () => {
       >
         <motion.h1 variants={variants}> Projects</motion.h1>
         <motion.div className="slider" variants={variants}>
-          <button onClick={handlePrev}>❮</button>
+          <button onClick={handlePrev} className="button">❮</button>
           <motion.div
             className="miniature-container"
             variants={miniatureVariantsB}
@@ -164,8 +164,7 @@ const Portfolio = () => {
             >
               <div className="links" style={{ left: "0%" }}>
                 <p>
-                  You're welcome to check out the code of my project on GitHub
-                  clicking here.
+                  Click here to check out the respository.
                 </p>
               </div>
             </a>
@@ -175,7 +174,7 @@ const Portfolio = () => {
               rel="noopener noreferer"
             >
               <div className="links" style={{ left: "50%" }}>
-                <p>You can visit the project clicking here.</p>
+                <p>Click here to visit the project.</p>
               </div>
             </a>
           </div>
@@ -192,7 +191,7 @@ const Portfolio = () => {
             />
           </motion.div>
 
-          <button onClick={handleNext}>❯</button>
+          <button onClick={handleNext} className="button">❯</button>
         </motion.div>
         <motion.div
           className="portfolio-description"
