@@ -25,7 +25,7 @@
       z-index: 3;
       
       @include mobile {
-        height: 50%;
+        height: 40%;
         width: 100%;
         gap: initial;
         align-items: center;
@@ -38,6 +38,11 @@
         color: rebeccapurple;
         letter-spacing: 10px;
         line-height: 1.2;
+
+        @include mobile {
+          font-size: 20px;
+          letter-spacing: 5px;
+        }
 
       }
 
@@ -70,7 +75,7 @@
           background-color: orange;
           margin-right: 20px;
           color: black;
-          font-weight: 300;
+          font-weight: bold;
           z-index: inherit;
           transition: 0.3s;
           user-select: none;
@@ -103,7 +108,8 @@
       
       
       @include mobile {
-        height: 50%;
+        height: 60%;
+        max-width: initial;
         width: 100%;
         top: unset;
         bottom: 0;

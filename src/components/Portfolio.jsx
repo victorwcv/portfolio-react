@@ -3,7 +3,7 @@ import { motion, useInView } from "framer-motion";
 import "../sass/portfolio.scss";
 import SliderText from "./SliderText";
 
-const Portfolio = ({anchoViewport}) => {
+const Portfolio = ({ anchoViewport }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animationActiveR, setAnimationActiveR] = useState(false);
   const [animationActiveL, setAnimationActiveL] = useState(false);
@@ -46,7 +46,7 @@ const Portfolio = ({anchoViewport}) => {
     setTimeout(() => {
       setAnimationActiveR(false);
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-    }, 300);
+    },350);
   };
 
   const handlePrev = () => {
@@ -56,7 +56,7 @@ const Portfolio = ({anchoViewport}) => {
       setCurrentIndex(
         (prevIndex) => (prevIndex - 1 + slides.length) % slides.length
       );
-    }, 300);
+    }, 350);
   };
 
   const variants = {
@@ -81,15 +81,15 @@ const Portfolio = ({anchoViewport}) => {
       x: 0,
       y: 0,
       scale: 1,
-      opacity: 0.5,
+      opacity: anchoViewport < 738 ? 1 : 0.5,
     },
     animate: {
-      x: "-220%",
-      y: 0,
-      scale: 3.1,
+      x: anchoViewport < 738 ? "-56.5%" : "-220%",
+      y: anchoViewport < 738 ? "-170%" : 0,
+      scale: anchoViewport < 738 ? 2.1 : 3.1,
       opacity: 1,
       transition: {
-        duration: 0.2,
+        duration: 0.3,
       },
     },
   };
@@ -99,15 +99,15 @@ const Portfolio = ({anchoViewport}) => {
       x: 0,
       y: 0,
       scale: 1,
-      opacity: 0.5,
+      opacity: anchoViewport < 738 ? 1 : 0.5,
     },
     animate: {
-      x: "220%",
-      y: 0,
-      scale: 3.1,
+      x: anchoViewport < 738 ? "56.5%" : "220%",
+      y: anchoViewport < 738 ? "-170%" : 0,
+      scale: anchoViewport < 738 ? 2.1 : 3.1,
       opacity: 1,
       transition: {
-        duration: 0.2,
+        duration: 0.3,
       },
     },
   };
@@ -135,7 +135,9 @@ const Portfolio = ({anchoViewport}) => {
       >
         <motion.h1 variants={variants}> Projects</motion.h1>
         <motion.div className="slider" variants={variants}>
-          <button onClick={handlePrev} className="button">❮</button>
+          <button onClick={handlePrev} className="button">
+            ❮
+          </button>
           <motion.div
             className="miniature-container"
             variants={miniatureVariantsB}
@@ -163,9 +165,7 @@ const Portfolio = ({anchoViewport}) => {
               rel="noopener noreferer"
             >
               <div className="links" style={{ left: "0%" }}>
-                <p>
-                  Click here to check out the respository.
-                </p>
+                <p>Click here to check out the respository.</p>
               </div>
             </a>
             <a
@@ -191,7 +191,9 @@ const Portfolio = ({anchoViewport}) => {
             />
           </motion.div>
 
-          <button onClick={handleNext} className="button">❯</button>
+          <button onClick={handleNext} className="button">
+            ❯
+          </button>
         </motion.div>
         <motion.div
           className="portfolio-description"
