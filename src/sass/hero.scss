@@ -19,12 +19,13 @@
       flex-direction: column;
       justify-content: center;
       gap: 40px;
-
+      
       @include mobile {
         height: 50%;
         width: 100%;
-        gap: 20px;
+        gap: initial;
         align-items: center;
+        justify-content: space-between;
         text-align: center;
       }
 

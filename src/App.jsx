@@ -36,9 +36,9 @@ function App() {
       <section id="my_projects" >
         <Portfolio anchoViewport={anchoViewport} />
       </section>
-      {/*<section id="contact" >
+      <section id="contact" >
         <Contact />
-      </section> */}
+      </section>
     </>
   );
 }

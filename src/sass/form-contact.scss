@@ -1,9 +1,17 @@
+@import './index.scss';
+
 .form {
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 20px;
   z-index: 4;
+
+  @include mobile {
+    min-width: 80vw;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
 
   input,
   textarea {
@@ -14,6 +22,11 @@
     color: white;
     border-radius: 5px;
     z-index: 4;
+
+    @include mobile {
+      font-size: 14px;
+      padding: 5px;
+    }
   }
 
   button {
@@ -24,6 +37,10 @@
     font-weight: 500;
     border-radius: 5px;
     z-index: 4;
+
+    @include mobile {
+      padding: 10px;
+    }
 
     &:hover {
       background-color: rgb(255, 189, 67);

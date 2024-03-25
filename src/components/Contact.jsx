@@ -52,7 +52,7 @@ const Contact = () => {
           <motion.div className="item" variants={variants}>
             <h2>
               <FontAwesomeIcon icon={faEnvelope} className="icon" />
-              Mail
+              E-mail
             </h2>
             <span>victorwccv@gmail.com</span>
           </motion.div>
