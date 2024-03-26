@@ -38,13 +38,20 @@ const FormContact = ({ ref }) => {
       }}
     >
       <Form className="form" ref={formRef}>
-        <Field id="firstName" name="firstName" placeholder="Name" required />
+        <Field
+          id="firstName"
+          name="firstName"
+          placeholder="Name"
+          autoComplete="name"
+          required
+        />
 
         <Field
           id="email"
           name="email"
           placeholder="E-mail"
           type="email"
+          autoComplete="email"
           required
         />
 
@@ -54,6 +61,7 @@ const FormContact = ({ ref }) => {
           placeholder="Message"
           id="message"
           name="message"
+          autoComplete="off"
           required
         />
         <button type="submit">Submit</button>
