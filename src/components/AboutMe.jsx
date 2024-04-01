@@ -43,7 +43,7 @@ const AboutMe = ({ anchoViewport }) => {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.5,
+        duration: 0.8,
         staggerChildren: 0.15,
       },
     },

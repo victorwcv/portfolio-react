@@ -61,8 +61,8 @@ const Portfolio = ({ anchoViewport }) => {
 
   const variants = {
     initial: {
-      x: 0,
-      y: anchoViewport < 300 ? 200 : 500,
+      x: anchoViewport > 600 ? -500 : -200,
+      y: 0,
       opacity: 0,
     },
     animate: {
@@ -70,8 +70,8 @@ const Portfolio = ({ anchoViewport }) => {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.5,
-        staggerChildren: 0.1,
+        duration: 0.8,
+        staggerChildren: 0.15,
       },
     },
   };

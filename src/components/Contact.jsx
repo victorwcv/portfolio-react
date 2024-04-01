@@ -1,38 +1,37 @@
 import { useRef } from "react";
 import "../sass/contact.scss";
 import FormContact from "./FormContact";
-import { motion, useInView } from "framer-motion";
+import { inView, motion, useInView } from "framer-motion";
 import SliderText from "./SliderText";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faEnvelope,
-  faLocation,
-  faMapPin,
-  faPhone,
-} from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faLocation } from "@fortawesome/free-solid-svg-icons";
 import Footer from "./Footer";
 
-const Contact = () => {
+const Contact = ({anchoViewport}) => {
   const ref = useRef();
   const isInView = useInView(ref, { margin: "-100px" });
 
   const variants = {
     initial: {
-      y: 500,
+      x: anchoViewport > 600 ? 500 : 200,
+      y: 0,
       opacity: 0,
     },
     animate: {
+      x: 0,
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.5,
-        staggerChildren: 0.1,
+        duration: 0.8,
+        staggerChildren: 0.15,
       },
     },
   };
 
   return (
-    <div className="contact-container">
+    <div className="contact-container"
+    
+    >
       <SliderText
         text="Innovative!"
         degree={0}
@@ -45,7 +44,7 @@ const Contact = () => {
         className="contact"
         variants={variants}
         initial="initial"
-        animate="animate"
+        animate={isInView && "animate"}
       >
         <motion.div className="text-container" variants={variants}>
           <motion.h1 variants={variants}>Let's work together</motion.h1>
@@ -98,7 +97,7 @@ const Contact = () => {
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
-            animate={isInView &&{ opacity: 1 }}
+            animate={isInView && { opacity: 1 }}
             transition={{ delay: 3.4, duration: 1 }}
           >
             <FormContact />
