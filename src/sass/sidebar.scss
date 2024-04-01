@@ -5,8 +5,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgb(255, 255, 255);
-  color: black;
+  // background-color: rgb(255, 255, 255);
+  color: $color-lightest;
   z-index: 10;
 
   .bg {
@@ -15,7 +15,7 @@
     left: 0;
     bottom: 0;
     width: 400px;
-    background: white;
+    background: $color-dark;
     z-index: inherit;
 
     @include mobile {
@@ -49,8 +49,8 @@
     height: 50px;
     border-radius: 50%;
     position: fixed;
-    top: 25px;
-    left: 25px;
+    top: 16px;
+    left: 15px;
     background-color: transparent;
     border: none;
     cursor: pointer;

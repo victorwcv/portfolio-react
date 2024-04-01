@@ -3,6 +3,13 @@ html {
   scroll-behavior: smooth;
 }
 
+$color-darkest: #1a1a1a;
+$color-dark: #003366;
+$color-lightest: #ffffff;
+$color-light: #c0c0c0;
+$color-accent: #ffd700;
+$shadow: rgba(0,0,0, .5);
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -12,8 +19,8 @@ html {
 }
 
 body {
-  background-color: #0c0c1d;
-  color: white;
+  background-color: $color-lightest;
+  color: $color-darkest;
   overflow-x: hidden;
 }
 

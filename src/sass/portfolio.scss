@@ -9,6 +9,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: $color-light;
   z-index: 3;
   user-select: none;
 
@@ -58,8 +59,8 @@
         display: flex;
         justify-content: center;
         height: auto;
-        background-color: #0070f3;
-        border-radius: 13px;
+        background-color: $color-darkest;
+        border-radius: 5px;
         overflow: hidden;
         margin: 0 30px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -111,8 +112,8 @@
             font-size: 18px;
             margin: 10%;
             text-align: center;
-            color: white;
-            font-weight: bold;
+            color: $color-lightest;
+            // font-weight: bold;
 
             @include mobile {
               font-size: 12px;
@@ -126,9 +127,9 @@
         overflow: hidden;
         width: 200px;
         height: fit-content;
-        background-color: #33333313;
+        background-color: $color-darkest;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
+        border-radius: 2px;
         display: flex;
         z-index: 3;
 
@@ -163,13 +164,13 @@
         background-color: transparent;
         border: none;
         font-size: 48px;
-        color: #ccc;
+        color: $color-accent;
         cursor: pointer;
         transition: all 0.2s ease-in-out;
         margin: 0 20px;
 
         &:hover {
-          color: orange;
+          color: $color-dark;
         }
 
         @include mobile {
@@ -187,7 +188,7 @@
           }
 
           &:active {
-            color: orange;
+            color: $color-dark;
           }
           
         }
@@ -196,8 +197,8 @@
     }
     .portfolio-description {
       text-align: center;
-      border: 2px solid orange;
-      border-radius: 10px;
+      border: 2px solid $color-accent;
+      border-radius: 5px;
       margin-top: 2rem;
       max-width: 800px;
 
@@ -221,7 +222,8 @@
 
       p {
         font-size: 1.2rem;
-        color: #ccc;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: $color-darkest;
         margin: 1rem;
 
         @include mobile {

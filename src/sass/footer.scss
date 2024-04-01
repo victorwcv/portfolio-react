@@ -1,3 +1,5 @@
+@import './index.scss';
+
 .footer {
   position: relative;
   width: 100%;
@@ -5,15 +7,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: 2px solid orange;
+  border-top: 2px solid $color-accent;
   user-select: none;
   p {
     font-size: 15px;
     padding: 15px;
     font-weight: lighter;
-    color: whitesmoke;
+    color: $color-darkest;
   }
   a {
+    color: $color-dark;
     position: absolute;
     top: -70%;
   }

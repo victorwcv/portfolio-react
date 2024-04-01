@@ -17,9 +17,9 @@
   textarea {
     font-size: 1rem;
     padding: 10px 20px;
-    background-color: transparent;
-    border: 1px solid white;
-    color: white;
+    background-color: rgba($color-dark, $alpha: .2);
+    border: 2px solid $color-dark;
+    color: $color-darkest;
     border-radius: 5px;
     z-index: 4;
 
@@ -30,9 +30,11 @@
   }
 
   button {
-    padding: 20px;
+    padding: 10px;
+    font-size: 20px;
     border: none;
-    background-color: orange;
+    background-color: $color-dark;
+    color: $color-lightest;
     cursor: pointer;
     font-weight: 500;
     border-radius: 5px;
@@ -43,7 +45,8 @@
     }
 
     &:hover {
-      background-color: rgb(255, 189, 67);
+      background-color: $color-accent;
+      opacity: 0.8;
     }
   }
 }

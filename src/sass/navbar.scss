@@ -1,8 +1,10 @@
 @import './index.scss';
 
 .navbar {
-
-  height: 100px;
+  height: 80px;
+  // border-bottom: 5px solid $color-accent;
+  // background-color: $color-accent;
+  border-bottom: 4px solid $color-accent;
 
   .wrapper {
     max-width: 1366px;
@@ -25,10 +27,12 @@
 
   .social {
     position: fixed;
+    color: $color-accent;
     right: 15%;
     display: flex;
     gap: 50px;
     z-index: 5;
+    color: $color-dark;
 
     @include mobile {
       gap: 15px;

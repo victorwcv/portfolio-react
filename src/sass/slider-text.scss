@@ -1,8 +1,11 @@
+@import './index.scss';
+
 .slider-text {
   position: absolute;
   font-size: 50vh;
   white-space: nowrap;
-  color: #ffffff09;
+  color: $color-dark;
+  opacity: .05;
   height: 100%;
   width: 100%;
   font-weight: bold;
