@@ -19,7 +19,9 @@
   }
 
   h1 {
-    font-size: 72px;
+    font-size: 54px;
+    padding-inline: 35px;
+    border-bottom: 4px solid $color-darkest;
     margin: 30px;
 
     @include mobile {
@@ -73,7 +75,8 @@
 
         .img-project {
           width: 600px;
-          height: auto;
+          aspect-ratio: 16/9;
+          object-fit: cover;
           @include mobile {
             width: 100%;
           }
@@ -82,7 +85,7 @@
         .links {
           position: absolute;
           display: flex;
-          align-items: end;
+          align-items: center;
           justify-content: center;
           z-index: 4;
           height: 100%;
@@ -110,7 +113,7 @@
 
           p {
             font-size: 18px;
-            margin: 10%;
+            margin:15px ;
             text-align: center;
             color: $color-lightest;
             // font-weight: bold;
@@ -149,7 +152,7 @@
 
         .miniature {
           width: 200px;
-          height: auto;
+          aspect-ratio: 16/9;
           z-index: 3;
 
           @include mobile {

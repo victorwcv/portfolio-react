@@ -12,11 +12,11 @@ const Portfolio = ({ anchoViewport }) => {
 
   const slides = [
     {
-      title: "Project HTML",
-      description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem inventore quaerat, nulla quisquam quidem adipisci natus ipsum voluptates, laborum reprehenderit ullam facere earum alias sed in, dolore obcaecati explicabo iste.`,
-      imgUrl: "/under-construction.webp",
-      githubLink: "#",
-      deployLink: "#",
+      title: "App de Autenticación de usuarios",
+      description: `Construida con el stack MERN (MongoDB, Express, React y Node.js), mi aplicación ofrece una experiencia de autenticación robusta y escalable, con estilos cuidadosamente diseñados utilizando Tailwind CSS para una apariencia atractiva y consistente.`,
+      imgUrl: "/auth.webp",
+      githubLink: "https://github.com/victorwcv/App-de-autenticacion-con-MERN",
+      deployLink: "https://app-de-autenticacion-con-mern.onrender.com",
     },
     {
       title: "Project React",
@@ -133,7 +133,7 @@ const Portfolio = ({ anchoViewport }) => {
         initial="initial"
         animate={isInView && "animate"}
       >
-        <motion.h1 variants={variants}> Projects</motion.h1>
+        <motion.h1 variants={variants}> My Projects</motion.h1>
         <motion.div className="slider" variants={variants}>
           <button onClick={handlePrev} className="button">
             ❮

@@ -67,7 +67,7 @@ const AboutMe = ({ anchoViewport }) => {
       >
         <div className="container-am">
           <motion.div className="pf-container no-touch" variants={variants}>
-            <img src="/pf.png" alt="Profile Picture" />
+            <img src="/pf.webp" alt="Profile Picture" />
           </motion.div>
           <motion.div className="content-am" variants={variants}>
             <h1 className="no-touch">About Me</h1>

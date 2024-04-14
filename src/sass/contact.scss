@@ -32,6 +32,7 @@
       flex-direction: column;
       justify-content: center;
       gap: 40px;
+      z-index: 4;
 
       @include mobile {
         margin: 20px;
