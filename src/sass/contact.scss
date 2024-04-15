@@ -1,4 +1,4 @@
-@import "./index.scss";
+@import "../index.scss";
 
 .contact-container {
   position: relative;
@@ -21,9 +21,9 @@
     gap: 50px;
 
     @include mobile {
-      justify-content: center;
+      justify-content: space-evenly;
       flex-direction: column;
-      gap: 10px;
+      gap: initial;
     }
 
     .text-container {
@@ -83,9 +83,16 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
         svg {
           overflow: visible;
+
+          @include mobile {
+            height: 300px;
+            width: 300px;
           }
+          
+        }
       }
     }
   }

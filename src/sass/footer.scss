@@ -1,4 +1,4 @@
-@import './index.scss';
+@import '../index.scss';
 
 .footer {
   position: relative;
@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: 2px solid $color-accent;
+  border-top: 4px solid $color-accent;
   user-select: none;
   p {
     font-size: 15px;

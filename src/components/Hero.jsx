@@ -52,7 +52,7 @@ const Hero = () => {
           </motion.div>
         </motion.div>
         <div className="image-container no-touch">
-          <img fetchpriority="high" src="/hero.png" alt="Me, myself and I." />
+          <img fetchpriority="high" src="/fullstack2.webp" alt="Me, myself and I." />
         </div>
       </div>
       <SliderText

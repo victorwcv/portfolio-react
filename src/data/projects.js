@@ -11,7 +11,7 @@ const projects = [
   {
     id: 2,
     title: "Vanilla JavaScript Projects",
-    description: 'Explore the essence of JavaScript programming with my assortment of projects. From simple DOM manipulation exercises to sophisticated web applications, these projects highlight the core features and capabilities of JavaScript without relying on any external libraries or frameworks. Immerse yourself in the foundational aspects of JavaScript, including event handling, asynchronous programming, and manipulating the Document Object Model (DOM), while creating engaging and interactive applications that showcase your proficiency as a JavaScript developer.',
+    description: 'From simple DOM manipulation exercises to sophisticated web applications, these projects highlight the core features and capabilities of JavaScript without relying on any external libraries or frameworks. Immerse yourself in the foundational aspects of JavaScript, including event handling, asynchronous programming, and manipulating the Document Object Model (DOM).',
     imgUrl: "/under-construction.webp",
     alt: "Vanilla JavaScript Projects",
     githubLink: "",

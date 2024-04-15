@@ -1,4 +1,4 @@
-@import "./index.scss";
+@import "../index.scss";
 
 .hero {
   height: calc(100vh - 80px);
@@ -29,7 +29,7 @@
         width: 100%;
         gap: initial;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-evenly;
         text-align: center;
       }
 
@@ -123,7 +123,6 @@
       img {
         height: auto;
         width: 100%;
-        transform: scaleX(-1);
 
         @include mobile {
           height: 100%;

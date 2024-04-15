@@ -3,11 +3,11 @@ html {
   scroll-behavior: smooth;
 }
 
-$color-darkest: #2c3b41;
-$color-dark: #14505e;
-$color-lightest: #e8f5f6;
-$color-light: #87d4e1;
-$color-accent: #0a9ab4;
+$color-darkest: #252525;
+$color-dark: #a80532;
+$color-lightest: #ffffff;
+$color-light: #f1f1f1;
+$color-accent: #d2dd4c;
 $shadow: rgba(0,0,0, .5);
 
 * {
@@ -19,7 +19,7 @@ $shadow: rgba(0,0,0, .5);
 }
 
 body {
-  background-color: $color-lightest;
+  background-color: $color-light;
   color: $color-darkest;
   overflow-x: hidden;
 }

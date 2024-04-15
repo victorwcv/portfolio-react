@@ -3,7 +3,7 @@ import Contact from "./components/Contact";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Portfolio from "./components/Portfolio";
-import "./sass/index.scss";
+import "./index.scss";
 import { useState, useEffect } from "react";
 
 function App() {
