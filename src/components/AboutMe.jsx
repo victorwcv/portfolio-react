@@ -82,7 +82,7 @@ const AboutMe = ({ anchoViewport }) => {
             </p>
             <a
               className="button-resume"
-              href="/resume-victor-ccanchi-en.pdf"
+              href="/resume-victorCcanchi.pdf"
               download={true}
             >
               <FontAwesomeIcon icon={faDownload} /> Download Resume

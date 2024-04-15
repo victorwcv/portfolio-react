@@ -7,7 +7,6 @@ import "./sass/index.scss";
 import { useState, useEffect } from "react";
 
 function App() {
-
   const [anchoViewport, setAnchoViewport] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -21,22 +20,19 @@ function App() {
       window.removeEventListener("resize", actualizarAncho);
     };
   }, []);
-  
 
   return (
     <>
-      <section id="homepage" >
+      <section id="homepage">
         <Navbar />
         <Hero />
       </section>
-       <section id="about_me" >
-        <AboutMe anchoViewport={anchoViewport}/>
+      <section id="about_me">
+        <AboutMe anchoViewport={anchoViewport} />
       </section>
-      <section id="my_projects" >
         <Portfolio anchoViewport={anchoViewport} />
-      </section>
-      <section id="contact" >
-        <Contact anchoViewport={anchoViewport}/>
+      <section id="contact">
+        <Contact anchoViewport={anchoViewport} />
       </section>
     </>
   );
