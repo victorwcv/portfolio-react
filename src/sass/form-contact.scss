@@ -17,11 +17,18 @@
   textarea {
     font-size: 1rem;
     padding: 10px 20px;
-    background-color: rgba($color-dark, $alpha: .2);
-    border: 2px solid $color-dark;
+    background-color: rgba($color-light, .5);
+    border: none;
     color: $color-darkest;
     border-radius: 5px;
+    outline: none;
+    resize: none;
     z-index: 4;
+
+    &::placeholder {
+      color: $color-darkest;
+      opacity: .6;
+    }
 
     @include mobile {
       font-size: 14px;

@@ -34,9 +34,8 @@ const Contact = ({anchoViewport}) => {
     >
       <SliderText
         text="Innovative!"
-        degree={0}
-        position={{ left: "0%", top: "-15%" }}
-        orientation={{ x: "-50%" }}
+        position={{ top: "35%", left: "30%" }}
+        orientation={{ x: "-80%" }}
         duration={10}
       />
       <motion.div

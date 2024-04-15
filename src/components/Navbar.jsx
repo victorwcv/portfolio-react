@@ -55,7 +55,7 @@ const Navbar = () => {
           initial="initial"
           animate="animate"
         >
-          Personal Portfolio
+          professional portfolio
         </motion.span>
         <motion.div className="social">
           {socialIconsLinks.map((item) => (

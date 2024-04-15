@@ -2,21 +2,20 @@
 
 .navbar {
   height: 80px;
-  // border-bottom: 5px solid $color-accent;
-  // background-color: $color-accent;
-  border-bottom: 4px solid $color-accent;
+  // border-bottom: 4px solid $color-accent;
 
   .wrapper {
     max-width: 1366px;
     margin: auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: end;
     height: 100%;
 
     span {
       font-weight: bolder;
       font-size: 1.5rem;
+      text-transform: capitalize;
 
       @include mobile {
         display: none;
@@ -28,11 +27,21 @@
   .social {
     position: fixed;
     color: $color-accent;
-    right: 15%;
+    left : 25px;
+    top: 100px;
     display: flex;
-    gap: 50px;
+    flex-direction: column;
+    gap: 30px;
     z-index: 5;
-    color: $color-dark;
+    color: $color-lightest;
+
+    @include mobile {
+      right: 15%;
+      left: initial;
+      top: initial;
+      flex-direction: initial;
+
+    }
 
     @include mobile {
       gap: 15px;

@@ -15,7 +15,7 @@
     left: 0;
     bottom: 0;
     width: 400px;
-    background: $color-dark;
+    background: $color-lightest;
     z-index: inherit;
 
     @include mobile {
@@ -34,7 +34,7 @@
       gap: 20px;
 
       a {
-        // border-bottom: 4px solid $color-lightest;
+        color: $color-darkest;
         font-size: 40px;
         @include mobile {
           font-size: 20px;
@@ -43,6 +43,7 @@
     }
   }
   .bars {
+    color: $color-darkest;
     display: flex;
     align-items: center;
     justify-content: center;

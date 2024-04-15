@@ -53,9 +53,8 @@ const AboutMe = ({ anchoViewport }) => {
     <div className="about-me">
       <SliderText
         text="Dreamer!"
-        degree={90}
-        position={{ left: "-40%", top: "60%" }}
-        orientation={{ y: "-150%" }}
+        position={{ top: "35%", left: "30%" }}
+        orientation={{ x: "-80%" }}
         duration={10}
       />
       <motion.div
