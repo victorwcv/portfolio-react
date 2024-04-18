@@ -63,7 +63,8 @@
         z-index: 3;
 
         @include mobile {
-          gap: 15px;
+          
+          gap: 10px;
         }
 
         a {
@@ -73,7 +74,7 @@
           border: none;
           border-radius: 10px;
           background-color: $color-dark;
-          margin-right: 20px;
+          // margin-right: 20px;
           color: $color-lightest;
           z-index: inherit;
           transition: all 0.3s ease;
@@ -102,8 +103,10 @@
     }
     .image-container {
       position: absolute;
+      display: flex;
+      align-items: center;
       height: 100%;
-      max-width: 70%;
+      max-width: 50%;
       bottom: 0;
       right: 0;
       z-index: 2;
