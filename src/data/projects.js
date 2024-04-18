@@ -6,7 +6,6 @@ const projects = [
     imgUrl: "/auth.webp",
     alt: "User Authentication Project Image",
     githubLink: "https://github.com/victorwcv/App-de-autenticacion-con-MERN",
-    deployLink: "https://app-de-autenticacion-con-mern.onrender.com",
   },
   {
     id: 2,
@@ -14,8 +13,7 @@ const projects = [
     description: 'From simple DOM manipulation exercises to sophisticated web applications, these projects highlight the core features and capabilities of JavaScript without relying on any external libraries or frameworks. Immerse yourself in the foundational aspects of JavaScript, including event handling, asynchronous programming, and manipulating the Document Object Model (DOM).',
     imgUrl: "/under-construction.webp",
     alt: "Vanilla JavaScript Projects",
-    githubLink: "",
-    deployLink: "",
+    githubLink: "https://github.com/victorwcv/weather-app",
   },
 ];
 

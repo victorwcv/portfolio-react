@@ -25,18 +25,11 @@ const Project = ({ project }) => {
             <p>{project.description}</p>
             <div className="button-links">
               <a
-                href={project.deployLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                See Demo
-              </a>
-              <a
                 href={project.githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                See Code
+                View on GitHub
               </a>
             </div>
           </motion.div>
