@@ -47,29 +47,36 @@
 
       @include mobile {
         flex-direction: column;
-        margin-top: 100px;
+        margin-top: 60px;
       }
 
-      .img-container {
+      .slider-container {
         flex: 1;
-        height: 50%;
+        position: relative;
+        height: 400px;
         border-radius: 10px;
         overflow: hidden;
         box-shadow: 0px 3px 6px $shadow;
         @include mobile {
-          width: 100%;
+          width: 90%;
           max-height: 200px;
-          border-radius: initial;
+          // border-radius: initial;
         }
 
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
+          position: absolute;
+          opacity: 0;
+          transition: opacity 1s ease-out;
 
           @include mobile {
             height: 200px;
           }
+        }
+        img.visible {
+          opacity: 1;
         }
       }
 
@@ -97,6 +104,8 @@
         }
 
         p {
+          font-size: 18px;
+          text-align: center;
 
           @include mobile {
             font-size: 14px;
@@ -115,7 +124,7 @@
 
           a {
             cursor: pointer;
-            font-size: 1rem;
+            font-size: 1.3rem;
             padding: 10px 40px;
             border: none;
             border-radius: 10px;
@@ -142,6 +151,16 @@
             &:active {
               scale: 0.9;
             }
+          }
+        }
+        .shields {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 15px;
+
+          img {
+            height: 30px;
           }
         }
       }

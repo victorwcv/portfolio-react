@@ -1,26 +1,16 @@
 import { useState, useRef } from "react";
 import { motion, useTransform, useScroll, useSpring } from "framer-motion";
 import "../sass/portfolio.scss";
-import SliderText from "./SliderText";
 import projects from "../data/projects.js";
+import ProjectSlider from "./ProjectSlider.jsx";
 
 const Project = ({ project }) => {
-  const ref = useRef();
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], [-300, 150]);
-
   return (
     <section id={project.id === 1 ? "my_projects" : null}>
       <div className="container">
         <div className="wrapper">
-          <div className="img-container" ref={ref}>
-            <img src={project.imgUrl} alt="" />
-          </div>
-          <motion.div className="text-container" style={{ y }}>
+          <ProjectSlider images={project.imgUrl} />
+          <div className="text-container">
             <h2>{project.title}</h2>
             <p>{project.description}</p>
             <div className="button-links">
@@ -32,7 +22,12 @@ const Project = ({ project }) => {
                 View on GitHub
               </a>
             </div>
-          </motion.div>
+            <div className="shields">
+              {project.shields.map((shield, index) => {
+                return <img key={index} src={shield} />;
+              })}
+            </div>
+          </div>
         </div>
       </div>
     </section>
