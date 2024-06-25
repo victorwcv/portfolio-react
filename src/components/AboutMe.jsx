@@ -72,9 +72,9 @@ const AboutMe = ({ anchoViewport }) => {
             <h1 className="no-touch">About Me</h1>
             <p className="no-touch">
               Hello, I'm Victor, soon-to-be graduate of the MIT xPRO
-              Professional Certificate Program in Full Stack Development.
+              Professional Certificate Program in Full Stack Development with MERN.
               Excited to finish this transformative journey! Proficient in
-              JavaScript, Node.js, React, and MongoDB, I bring a dedication to
+              JavaScript, HTML, and CSS, I bring a dedication to
               technical excellence and a passion for innovation. Eager to apply
               my skills to challenging projects and contribute to your team's
               success with creative web solutions.
