@@ -21,6 +21,15 @@ const Project = ({ project }) => {
               >
                 View on GitHub
               </a>
+              {project.demoLink && (
+                <a
+                  href={project.demoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project
+                </a>
+              )}
             </div>
             <div className="shields">
               {project.shields.map((shield, index) => {

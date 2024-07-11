@@ -4,8 +4,9 @@ const projects = [
     title: "FullStack Banking App",
     description:
       "This banking application, developed as my MIT professional certification capstone, boasts comprehensive functionalities tailored for both users and administrators. It features fully secure and private routes, adhering to the latest best practices in modern development for seamless implementation. Powered by the advanced MERN stack (MongoDB, Express.js, React, Node.js) and structured with a robust MVC architecture, this app ensures secure and efficient banking experiences. Explore cutting-edge features designed with user-centricity and administrative efficiency in mind.",
-    imgUrl: ["/under-construction.webp", "/under-construction.webp", "/under-construction.webp"],
+    imgUrl: ["/BA_homePage.jpg", "/BA_transactions.jpg", "/BA_deposit.jpg", "/BA_createAccount.jpg", "/BA_adminPanel.jpg"],
     alt: "Bank app Project Image",
+    demoLink: "https://victor-ccanchifullstackbankingapplication.onrender.com/",
     githubLink: "https://github.com/victorwcv/MIT-capstone-bank-app",
     shields: [
       "https://img.shields.io/badge/React-18-blue",
@@ -24,6 +25,7 @@ const projects = [
       "Built with the MERN stack (MongoDB, Express, React, and Node.js), my application provides a robust and scalable authentication experience, with carefully crafted styles using Tailwind CSS for an attractive and consistent appearance",
     imgUrl: ["/pic_0.jpg", "/pic_1.jpg", "/pic_3.jpg", "/pic_2.jpg"],
     alt: "User Authentication Project Image",
+    demoLink: "https://app-de-autenticacion-con-mern.onrender.com/",
     githubLink: "https://github.com/victorwcv/App-de-autenticacion-con-MERN",
     shields: [
       "https://img.shields.io/badge/React-18-blue",

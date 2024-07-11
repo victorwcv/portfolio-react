@@ -74,7 +74,7 @@ const Navbar = () => {
                 size="2x"
                 shake={isHover[item.name]}
                 icon={item.icon}
-                title={`Go to my ${item.name}`}
+                title={item.name}
               />
             </motion.a>
           ))}
