@@ -36,7 +36,7 @@ const Hero = () => {
             VICTOR CCANCHI
           </motion.h2>
           <motion.h1 className="no-touch" variants={textVariants}>
-            Junior Fullstack Developer with a Senior Mindset
+            FullStack Developer  
           </motion.h1>
           <motion.div className="buttons-container" variants={textVariants}>
             <a href="#my_projects"> See my Work</a>
